@@ -1,0 +1,19 @@
+{
+    "nav": {
+        "home": "Beranda",
+        "projects": "Proyek"
+    },
+    "hero": {
+        "badge": "Portofolio Profesional",
+        "title": "Halo, saya {{name}}.",
+        "subtitle": "Mahasiswa Teknik Informatika yang berfokus pada pengembangan Web dan Mobile berskala besar, dengan pendekatan desain UI/UX yang berpusat pada pengguna.",
+        "cta_projects": "Lihat Proyek",
+        "cta_cv": "Unduh CV"
+    },
+    "about": {
+        "title": "Tentang Saya",
+        "p1": "Saat ini saya menempuh semester 4 di D4 Teknik Informatika, Politeknik Elektronika Negeri Surabaya (PENS). Saya memiliki gairah tinggi dalam mentransformasi masalah kompleks menjadi solusi digital yang efisien dan fungsional.",
+        "p2": "Saya tidak hanya menulis kode; saya membangun pengalaman. Fokus utama saya adalah menciptakan aplikasi yang performan, bersih, dan mudah dirawat (maintainable).",
+        "p3": "Saya sangat mengedepankan kolaborasi tim dan kerja kolektif. Dengan menerapkan prinsip Agile dan Scrum, saya memastikan setiap proses pengembangan berjalan transparan, adaptif, dan memberikan nilai nyata bagi pengguna maupun klien."
+    }
+}
