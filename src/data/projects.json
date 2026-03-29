@@ -1,0 +1,14 @@
+[
+    {
+        "id": "smartroom",
+        "title": "SmartRoom",
+        "description": {
+            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
+            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+        },
+        "techStack": ["React", "HTML", "CSS"],
+        "image": "/images/smartroom-mock.png",
+        "repoLink": "https://github.com",
+        "demoLink": "https://youtube.com"
+    }
+]

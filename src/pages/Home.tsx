@@ -1,6 +1,7 @@
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+import Projects from "./Projects";
 
 export default function Home(){
     const { t } = useTranslation();
@@ -43,6 +44,7 @@ export default function Home(){
                     <p>{t('about.p3')}</p>
                 </div>
             </section>
+            <Projects />
         </div>
     );
 }
