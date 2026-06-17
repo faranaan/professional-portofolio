@@ -7,7 +7,7 @@ export default function Home() {
     const { t } = useTranslation();
 
     const handleContact = () => {
-        const phoneNumber = "6285646465886"; // GANTI NOMORMU
+        const phoneNumber = "6288803482016"; // GANTI NOMORMU
         const message = encodeURIComponent("Halo Far'an, saya melihat portofolio Anda dan tertarik untuk berdiskusi lebih lanjut.");
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     };
@@ -45,8 +45,12 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="w-56 h-56 md:w-80 md:h-80 bg-gray-100 dark:bg-gray-800 rounded-full flex-shrink-0 border-8 border-white dark:border-gray-900 shadow-2xl overflow-hidden flex items-center justify-center relative">
-                    <span className="text-gray-400 font-medium">Foto Profile</span>
+                <div className="w-56 h-56 md:w-80 md:h-80 bg-gray-100 dark:bg-gray-800 rounded-full flex-shrink-0 border-8 border-white dark:border-gray-900 shadow-2xl overflow-hidden relative">
+                    <img 
+                        src="/images/faran-profile.jpeg" 
+                        alt="Muhammad Far'an Profile" 
+                        className="w-full h-full object-cover"
+                    />
                 </div>
             </motion.section>
             

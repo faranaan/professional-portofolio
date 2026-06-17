@@ -1,28 +1,47 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ArrowLeft, ExternalLink, ChevronLeft, ChevronRight, Calendar, ShieldCheck, FileText } from "lucide-react";
-import { SiFlutter, SiGithub, SiReact, SiHtml5, SiCss, SiTypescript, SiTailwindcss, SiLaravel, SiPhp, SiPostgresql } from "react-icons/si";
+import { 
+    ArrowLeft, ExternalLink, ChevronLeft, ChevronRight, 
+    Calendar, ShieldCheck, FileText, ChevronDown,
+    LayoutDashboard, BookOpenCheck, Clock, Ticket,
+    MapPinned, Radio, BarChart3, BellRing
+} from "lucide-react";
+import { 
+    SiFlutter, SiGithub, SiReact, SiHtml5, SiCss, SiTypescript, 
+    SiTailwindcss, SiLaravel, SiPhp, SiPostgresql, SiYoutube, SiGoogleplay,
+    SiDocker
+} from "react-icons/si";
 import type { JSX } from "react";
 import projectsData from '../data/projects.json';
 import { motion, AnimatePresence } from "framer-motion";
 
 const techIcons: { [key: string]: JSX.Element } = {
-  "React": <SiReact className="text-[#61DAFB]" />,
-  "HTML": <SiHtml5 className="text-[#E34F26]" />,
-  "CSS": <SiCss className="text-[#1572B6]" />,
-  "TypeScript": <SiTypescript className="text-[#3178C6]" />,
-  "Tailwind CSS": <SiTailwindcss className="text-[#06B6D4]" />,
-  "Laravel": <SiLaravel className="text-[#FF2D20]" />,
-  "PHP": <SiPhp className="text-[#777BB4]" />,
-  "Flutter": <SiFlutter className="text-[#02569B]" />,
-  "PostgreSQL": <SiPostgresql className="text-[#4169E1]" />
+    "React": <SiReact className="text-[#61DAFB]" />,
+    "HTML": <SiHtml5 className="text-[#E34F26]" />,
+    "CSS": <SiCss className="text-[#1572B6]" />,
+    "TypeScript": <SiTypescript className="text-[#3178C6]" />,
+    "Tailwind CSS": <SiTailwindcss className="text-[#06B6D4]" />,
+    "Laravel": <SiLaravel className="text-[#FF2D20]" />,
+    "PHP": <SiPhp className="text-[#777BB4]" />,
+    "Flutter": <SiFlutter className="text-[#02569B]" />,
+    "PostgreSQL": <SiPostgresql className="text-[#4169E1]" />,
+    "ASP.NET Core": <span className="text-[#512BD4] font-bold">.NET</span>,
+    "Docker": <SiDocker className="text-[#2496ED]" />
 };
 
 const iconMap: { [key: string]: JSX.Element } = {
     "Calendar": <Calendar className="text-accent dark:text-blue-400" size={24} />,
     "ShieldCheck": <ShieldCheck className="text-accent dark:text-blue-400" size={24} />,
-    "FileText": <FileText className="text-accent dark:text-blue-400" size={24} />
+    "FileText": <FileText className="text-accent dark:text-blue-400" size={24} />,
+    "LayoutDashboard": <LayoutDashboard className="text-accent dark:text-blue-400" size={24} />,
+    "BookOpenCheck": <BookOpenCheck className="text-accent dark:text-blue-400" size={24} />,
+    "Clock": <Clock className="text-accent dark:text-blue-400" size={24} />,
+    "Ticket": <Ticket className="text-accent dark:text-blue-400" size={24} />,
+    "MapPinned": <MapPinned className="text-accent dark:text-blue-400" size={24} />,
+    "Radio": <Radio className="text-accent dark:text-blue-400" size={24} />,
+    "BarChart3": <BarChart3 className="text-accent dark:text-blue-400" size={24} />,
+    "BellRing": <BellRing className="text-accent dark:text-blue-400" size={24} />
 };
 
 export default function ProjectDetail() {
@@ -30,6 +49,8 @@ export default function ProjectDetail() {
     const { i18n, t } = useTranslation();
     const currentLang = i18n.language as 'id' | 'en';
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [showVideoMenu, setShowVideoMenu] = useState(false);
+    const [showRepoMenu, setShowRepoMenu] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -40,7 +61,7 @@ export default function ProjectDetail() {
     if (!project) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-theme-light dark:bg-theme-dark">
-                <h1 className="text-2xl text-text-mainLight dark:text-white">{t('projects_page.p1')}</h1>
+                <h1 className="text-2xl text-text-mainLight dark:text-white">{t('projects_page.p1', 'Project not found')}</h1>
             </div>
         );
     }
@@ -53,7 +74,6 @@ export default function ProjectDetail() {
         setCurrentImageIndex((prev) => (prev === project.gallery.length - 1 ? 0 : prev + 1));
     };
 
-    // Fungsi Render Blok dengan animasi scroll
     const renderBlock = (block: any, index: number) => {
         const blockVariants = {
             hidden: { opacity: 0, y: 30 },
@@ -62,7 +82,7 @@ export default function ProjectDetail() {
                 y: 0, 
                 transition: { 
                     duration: 0.6, 
-                    ease: "easeOut" as const // <--- Tambahkan "as const" di sini
+                    ease: "easeOut" as const
                 } 
             }
         };
@@ -170,7 +190,7 @@ export default function ProjectDetail() {
         <div className="min-h-screen bg-theme-light dark:bg-theme-dark font-sans transition-colors duration-300">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
                 
-                {/* Back Button Animation */}
+                {/* Back Button */}
                 <motion.div 
                     initial={{ opacity: 0, x: -20 }} 
                     animate={{ opacity: 1, x: 0 }} 
@@ -178,11 +198,11 @@ export default function ProjectDetail() {
                 >
                     <Link to="/" className="inline-flex items-center gap-2 text-text-mutedLight dark:text-gray-400 hover:text-accent dark:hover:text-blue-400 transition-colors mb-10">
                         <ArrowLeft size={20} />
-                        {t('nav.home')}
+                        {t('nav.home', 'Home')}
                     </Link>
                 </motion.div>
 
-                {/* Main Header Animation */}
+                {/* Main Header */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }} 
                     animate={{ opacity: 1, y: 0 }} 
@@ -200,21 +220,114 @@ export default function ProjectDetail() {
                             </span>
                         ))}
                     </div>
-                    <div className="flex items-center gap-4">
+
+                    {/* ACTION BUTTONS (Demo, Repo Dropdown, YouTube Dropdown) */}
+                    <div className="flex flex-wrap items-center gap-4 mb-8">
+                        {/* 1. Live Demo / Play Store */}
                         {project.demoLink && (
-                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-xl hover:bg-accent-hover transition-colors font-medium shadow-md">
-                                <ExternalLink size={18} /> {t('project_detail.live_demo')}
+                            <a 
+                                href={project.demoLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all font-medium shadow-md hover:shadow-lg ${
+                                    project.demoLink.includes('play.google.com') 
+                                    ? 'bg-[#01875F] hover:bg-[#016B4B] text-white' 
+                                    : 'bg-accent hover:bg-accent-hover text-white'
+                                }`}
+                            >
+                                {project.demoLink.includes('play.google.com') ? (
+                                    <><SiGoogleplay size={18} /> Play Store</>
+                                ) : (
+                                    <><ExternalLink size={18} /> {t('project_detail.live_demo', 'Live Demo')}</>
+                                )}
                             </a>
                         )}
-                        {project.repoLink && (
+
+                        {/* 2. Repository (Multiple/Dropdown OR Single) */}
+                        {(project as any).repoLinks && (project as any).repoLinks.length > 0 ? (
+                            <div className="relative z-40">
+                                <button 
+                                    onClick={() => setShowRepoMenu(!showRepoMenu)}
+                                    className="flex items-center gap-2 bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 px-6 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all font-medium shadow-sm"
+                                >
+                                    <SiGithub size={18} /> 
+                                    {t('project_detail.repo', 'Repositories')} 
+                                    <ChevronDown size={18} className={`transition-transform duration-300 ${showRepoMenu ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                <AnimatePresence>
+                                    {showRepoMenu && (
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="absolute left-0 top-full mt-2 w-56 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-xl overflow-hidden flex flex-col"
+                                        >
+                                            {(project as any).repoLinks.map((repo: any, idx: number) => (
+                                                <a 
+                                                    key={idx}
+                                                    href={repo.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors border-b border-gray-50 dark:border-gray-800/50 last:border-0"
+                                                >
+                                                    <SiGithub size={16} />
+                                                    <span className="text-sm font-medium">{repo.label}</span>
+                                                </a>
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ) : project.repoLink ? (
                             <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 px-6 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium shadow-sm">
-                                <SiGithub size={18} /> {t('project_detail.repo')}
+                                <SiGithub size={18} /> {t('project_detail.repo', 'Repository')}
                             </a>
+                        ) : null}
+
+                        {/* 3. YouTube Demos */}
+                        {project.videoLinks && project.videoLinks.length > 0 && (
+                            <div className="relative z-50">
+                                <button 
+                                    onClick={() => setShowVideoMenu(!showVideoMenu)}
+                                    className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/30 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-all font-medium shadow-sm"
+                                >
+                                    <SiYoutube size={18} /> 
+                                    {t('project_detail.watch_demos', 'Watch Demos')} 
+                                    <ChevronDown size={18} className={`transition-transform duration-300 ${showVideoMenu ? 'rotate-180' : ''}`} />
+                                </button>
+
+                                <AnimatePresence>
+                                    {showVideoMenu && (
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="absolute left-0 top-full mt-2 w-56 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 rounded-xl shadow-xl overflow-hidden flex flex-col"
+                                        >
+                                            {project.videoLinks.map((video: any, idx: number) => (
+                                                <a 
+                                                    key={idx}
+                                                    href={video.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-3 px-4 py-3 hover:bg-red-50 dark:hover:bg-red-900/10 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors border-b border-gray-50 dark:border-gray-800/50 last:border-0"
+                                                >
+                                                    <SiYoutube size={16} className="text-red-500" />
+                                                    <span className="text-sm font-medium">{video.label}</span>
+                                                </a>
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
                         )}
                     </div>
                 </motion.div>
 
-                {/* Gallery Animation */}
+                {/* Gallery */}
                 {project.gallery && project.gallery.length > 0 && (
                     <motion.div 
                         initial={{ opacity: 0, scale: 0.95 }} 
@@ -226,7 +339,7 @@ export default function ProjectDetail() {
                             <motion.img 
                                 key={currentImageIndex}
                                 src={project.gallery[currentImageIndex]} 
-                                alt={`${project.title} ${t('project_detail.screenshot')} ${currentImageIndex + 1}`} 
+                                alt={`${project.title} screenshot ${currentImageIndex + 1}`} 
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
@@ -253,7 +366,7 @@ export default function ProjectDetail() {
                     </motion.div>
                 )}
 
-                {/* Modular Blocks with Scroll Animation */}
+                {/* Blocks */}
                 <div className="space-y-4">
                     {project.caseStudy?.map((block, index) => renderBlock(block, index))}
                 </div>

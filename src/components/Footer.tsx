@@ -54,10 +54,10 @@ export default function Footer() {
                     className="flex items-center gap-6"
                 >
                     {[
-                        { href: "mailto:emailkamu@gmail.com", icon: <Mail size={20} /> },
-                        { href: "https://linkedin.com/in/usernamekamu", icon: <FaLinkedin size={18} /> },
-                        { href: "https://github.com/faran", icon: <SiGithub size={18} /> },
-                        { href: "https://instagram.com/usernamekamu", icon: <SiInstagram size={18} /> }
+                        { href: "mailto:aan21102006@gmail.com", icon: <Mail size={20} /> },
+                        { href: "https://linkedin.com/in/muhammad-far-an", icon: <FaLinkedin size={18} /> },
+                        { href: "https://github.com/faranaan", icon: <SiGithub size={18} /> },
+                        { href: "https://instagram.com/faran_aan", icon: <SiInstagram size={18} /> }
                     ].map((link, index) => (
                         <motion.a
                             key={index}

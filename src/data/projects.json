@@ -1,127 +1,163 @@
 [
     {
-        "id": "smartroom",
-        "title": "SmartRoom",
+        "id": "tixdesk",
+        "title": "TIXDESK",
         "description": {
-            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
-            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+            "id": "Sistem manajemen tiket helpdesk multi-platform untuk mengoptimalkan layanan support dengan pelacakan SLA otomatis, knowledge base, dan metrik kinerja real-time.",
+            "en": "A multi-platform helpdesk ticketing system to optimize support services with automated SLA tracking, knowledge base, and real-time performance metrics."
         },
-        "techStack": ["React", "HTML", "CSS"],
-        "image": "/images/smartroom-mock.png",
+        "techStack": ["Flutter", "React", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS"],
+        "image": "/images/tixdesk/hero.png",
         "gallery": [
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png"
+            "/images/tixdesk/hero.png",
+            "/images/tixdesk/web-dashboard.png",
+            "/images/tixdesk/mobile-app.png",
+            "/images/tixdesk/knowledge-base.png"
         ],
-        "repoLink": "https://github.com",
-        "demoLink": "https://youtube.com",
+        "repoLink": "",
+        "demoLink": "https://play.google.com/store/apps/details?id=com.tixdesk.app&pcampaignid=web_share",
+        "videoLinks": [
+            { "label": "Mobile Demo v1", "url": "https://youtu.be/6ge-_EoneJQ?si=xnBFXUAnQrRdrFq0" },
+            { "label": "Mobile Demo v2", "url": "https://youtu.be/WzDYqOasQBM?si=CZW0kyezSshpnF8z" },
+            { "label": "Web App Demo", "url": "https://youtu.be/5m18vKVVrgI?si=IlSZFJMvtzjX33Lh" }
+        ],
         "caseStudy": [
             {
                 "type": "hero-section",
-                "badge": "ENTERPRISE SOLUTION",
-                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "badge": "ENTERPRISE HELPDESK SYSTEM",
+                "title": { "id": "TIXDESK: Solusi Terpadu Support Ticketing", "en": "TIXDESK: Unified Support Ticketing Solution" },
                 "subtitle": { 
-                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
-                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                    "id": "Platform cerdas untuk mengeliminasi duplikasi tugas, mempercepat waktu respons, dan memantau kinerja agent secara terpusat. Dikembangkan dengan metodologi Scrum.", 
+                    "en": "A smart platform to eliminate duplicate tasks, accelerate response times, and centrally monitor agent performance. Developed using Agile Scrum methodology." 
                 },
                 "stats": [
-                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
-                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                    { "value": "Multi", "label": { "id": "Platform (Web & App)", "en": "Platform (Web & App)" } },
+                    { "value": "SLA", "label": { "id": "Real-time Tracking", "en": "Real-time Tracking" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "THE PROBLEM",
-                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "badge": "LATAR BELAKANG",
+                "title": { "id": "Mengatasi Kekacauan Layanan Support", "en": "Solving Support Service Chaos" },
                 "content": { 
-                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
-                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                    "id": "Sebelum adanya TIXDESK, penanganan keluhan sering kali kacau: support agent mengerjakan keluhan yang duplikat, tidak ada penentuan skala prioritas sehingga request penting terlewat, waktu respons yang lambat, dan tidak adanya database solusi (knowledge base). Selain itu, pihak manajemen tidak memiliki metrik ukur kinerja yang jelas terhadap efektivitas tim support.", 
+                    "en": "Prior to TIXDESK, complaint handling was chaotic: support agents worked on duplicate issues, lack of prioritization caused critical requests to be missed, response times were slow, and there was no solution database (knowledge base). Furthermore, management lacked clear metrics to measure the effectiveness of the support team." 
                 }
             },
             {
                 "type": "feature-grid",
-                "badge": "PLATFORM FEATURES",
-                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "badge": "FITUR UTAMA",
+                "title": { "id": "Arsitektur Solusi & Logika Bisnis", "en": "Solution Architecture & Business Logic" },
                 "items": [
                     { 
-                        "icon": "Calendar", 
-                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
-                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                        "icon": "LayoutDashboard", 
+                        "title": { "id": "Analitik & Metrik Kinerja", "en": "Analytics & Performance Metrics" }, 
+                        "desc": { "id": "Dashboard interaktif memantau volume tiket, Average Resolution Time, SLA Compliance Rate, dan nilai CSAT.", "en": "Interactive dashboard monitoring ticket volume, Average Resolution Time, SLA Compliance, and CSAT scores." } 
                     },
                     { 
-                        "icon": "ShieldCheck", 
-                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
-                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                        "icon": "BookOpenCheck", 
+                        "title": { "id": "Knowledge Base & Self-Service", "en": "Knowledge Base & Self-Service" }, 
+                        "desc": { "id": "Artikel solusi (FAQ) otomatis disarankan saat user membuat tiket, berpotensi memotong 40% tiket berulang.", "en": "Solution articles (FAQ) auto-suggested during ticket creation, potentially reducing repetitive tickets by 40%." } 
                     },
                     { 
-                        "icon": "FileText", 
-                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
-                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                        "icon": "Clock", 
+                        "title": { "id": "SLA Tracking & Auto-Eskalasi", "en": "SLA Tracking & Auto-Escalation" }, 
+                        "desc": { "id": "Countdown SLA real-time dengan alert peringatan dan eskalasi otomatis ke Support Lead jika melampaui batas waktu.", "en": "Real-time SLA countdowns with warning alerts and auto-escalation to Support Leads if breached." } 
+                    },
+                    { 
+                        "icon": "Ticket", 
+                        "title": { "id": "Manajemen Tiket Cerdas", "en": "Smart Ticket Management" }, 
+                        "desc": { "id": "ID Tiket unik, status tracking (Open-Closed), threaded comments, attachment file, dan prioritas otomatis.", "en": "Unique Ticket IDs, status tracking (Open-Closed), threaded comments, file attachments, and automated priorities." } 
                     }
                 ]
+            },
+            {
+                "type": "text-heading",
+                "badge": "WORKFLOW & AKSES",
+                "title": { "id": "Alur Kerja & Pembagian Hak Akses", "en": "Workflow & Role-based Access" },
+                "content": { 
+                    "id": "TIXDESK mendukung alur kerja end-to-end yang mulus: End User membuat tiket -> Support Agent mengambil & memproses tiket -> Tiket berstatus Resolved. Jika masalah belum tuntas, user dapat mengajukan 'Re-Open'. Sistem ini membagi akses menjadi 4 peran spesifik: End User (tracking & self-service), Support Agent (penanganan tiket), Support Lead (assign & eskalasi), dan Admin (konfigurasi sistem & SLA).", 
+                    "en": "TIXDESK supports a seamless end-to-end workflow: End Users create tickets -> Support Agents claim & process them -> Tickets are marked Resolved. If unresolved, users can request a 'Re-Open'. The system separates access into 4 specific roles: End User (tracking), Support Agent (handling), Support Lead (escalation), and Admin (SLA configuration)." 
+                }
             }
         ]
     },
     {
-        "id": "smartroom2",
-        "title": "SmartRoom",
+        "id": "quakealert",
+        "title": "QuakeAlert",
         "description": {
-            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
-            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+            "id": "Platform responsif pemantau gempa bumi real-time dengan integrasi API BMKG, pemetaan interaktif, dan notifikasi kebencanaan cerdas.",
+            "en": "A real-time earthquake monitoring responsive platform with BMKG API integration, interactive mapping, and smart disaster notifications."
         },
-        "techStack": ["React", "HTML", "CSS"],
-        "image": "/images/smartroom-mock.png",
+        "techStack": ["React", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS", "Docker"],
+        "image": "/images/quakealert/hero.png",
         "gallery": [
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png"
+            "/images/quakealert/hero.png",
+            "/images/quakealert/interactive-map.png",
+            "/images/quakealert/analytics.png",
+            "/images/quakealert/notification.png"
         ],
-        "repoLink": "https://github.com",
-        "demoLink": "https://youtube.com",
+        "repoLink": "https://github.com/fathss/quake-alert-fe",
+        "demoLink": "https://quakealertweb-production.up.railway.app/",
+        "videoLinks": [],
         "caseStudy": [
             {
                 "type": "hero-section",
-                "badge": "ENTERPRISE SOLUTION",
-                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "badge": "REAL-TIME DISASTER TRACKING",
+                "title": { "id": "QuakeAlert: Sistem Informasi Gempa Cerdas", "en": "QuakeAlert: Smart Earthquake Information System" },
                 "subtitle": { 
-                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
-                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                    "id": "Menghadirkan informasi kegempaan langsung dari BMKG dengan visualisasi peta dinamis, analisis historis, dan peringatan instan untuk seluruh masyarakat Indonesia.", 
+                    "en": "Delivering live earthquake information from BMKG with dynamic map visualization, historical analysis, and instant alerts for the Indonesian public." 
                 },
                 "stats": [
-                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
-                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                    { "value": "Real-time", "label": { "id": "BMKG Integration", "en": "BMKG Integration" } },
+                    { "value": "Live", "label": { "id": "Push Notifications", "en": "Push Notifications" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "THE PROBLEM",
-                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "badge": "LATAR BELAKANG",
+                "title": { "id": "Aksesibilitas Informasi Kebencanaan", "en": "Disaster Information Accessibility" },
                 "content": { 
-                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
-                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                    "id": "Meskipun informasi gempa sangat krusial bagi masyarakat Indonesia, banyak platform web yang tersedia saat ini kurang intuitif, sulit dipahami secara visual, dan tidak memfasilitasi peringatan instan secara personal. QuakeAlert dibangun agar masyarakat merasa lebih aman, *aware*, dan nyaman dalam memantau kondisi gempa kapan saja melalui antarmuka yang modern dan responsif.", 
+                    "en": "Although earthquake information is highly crucial for Indonesians, many currently available web platforms are counter-intuitive, visually difficult to understand, and lack personalized instant alerts. QuakeAlert was built so the public feels safer, more aware, and comfortable monitoring earthquake conditions anytime through a modern, responsive interface." 
                 }
             },
             {
                 "type": "feature-grid",
-                "badge": "PLATFORM FEATURES",
-                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "badge": "FITUR UTAMA",
+                "title": { "id": "Arsitektur Solusi & Kapabilitas", "en": "Solution Architecture & Capabilities" },
                 "items": [
                     { 
-                        "icon": "Calendar", 
-                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
-                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                        "icon": "Radio", 
+                        "title": { "id": "Integrasi BMKG & Geolocation", "en": "BMKG Integration & Geolocation" }, 
+                        "desc": { "id": "Menarik API BMKG secara real-time dan otomatis memetakan/mengelompokkan lokasi kejadian berdasarkan provinsi dari data koordinat.", "en": "Fetches real-time BMKG API and automatically maps/groups incident locations by province based on coordinate data." } 
                     },
                     { 
-                        "icon": "ShieldCheck", 
-                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
-                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                        "icon": "MapPinned", 
+                        "title": { "id": "Pemetaan Visual Interaktif", "en": "Interactive Visual Mapping" }, 
+                        "desc": { "id": "Menampilkan titik lokasi gempa di peta dengan indikator visual yang membedakan besaran magnitudo dan jam kejadian secara akurat.", "en": "Displays earthquake pinpoint locations on a map with visual indicators differentiating magnitude sizes and exact event times." } 
                     },
                     { 
-                        "icon": "FileText", 
-                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
-                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                        "icon": "BarChart3", 
+                        "title": { "id": "Analisis & Grafik Historis", "en": "Historical Analytics & Graphs" }, 
+                        "desc": { "id": "Halaman analitik khusus yang menggabungkan data gempa lampau dan terbaru, menampilkan tren historis berbasis dot-matrix dan grafik.", "en": "A dedicated analytics page combining past and recent earthquake data, displaying historical trends via dot-matrix and statistical graphs." } 
+                    },
+                    { 
+                        "icon": "BellRing", 
+                        "title": { "id": "Sistem Notifikasi Pintar", "en": "Smart Notification System" }, 
+                        "desc": { "id": "Mendukung notifikasi push langsung di browser tanpa login, serta notifikasi via Email bagi pengguna yang terdaftar.", "en": "Supports direct push notifications in the browser without login, as well as Email notifications for registered users." } 
                     }
                 ]
+            },
+            {
+                "type": "text-heading",
+                "badge": "WORKFLOW & AKSES",
+                "title": { "id": "Alur Kerja Sistem Otomatis", "en": "Automated System Workflow" },
+                "content": { 
+                    "id": "Aplikasi ini dirancang untuk bekerja secara otonom. Saat ada gempa terbaru, backend ASP.NET Core akan menarik data, menyimpannya di PostgreSQL, lalu menampilkannya secara langsung di peta frontend React. Pengguna terbagi menjadi dua: Guest (mendapat visualisasi penuh & push notif web) dan Non-Guest/Login (mendapat tambahan perlindungan berupa notifikasi langsung ke Email mereka saat terjadi gempa).", 
+                    "en": "The application is designed to work autonomously. Upon a new earthquake, the ASP.NET Core backend fetches the data, saves it in PostgreSQL, and reflects it live on the React frontend map. Users are divided into two categories: Guests (full visualization & web push notifs) and Non-Guests/Logged-in (additional protection via direct Email alerts when quakes occur)." 
+                }
             }
         ]
     },
