@@ -18,6 +18,34 @@
     },
     "projects_page": {
         "title": "Proyek Saya",
-        "subtitle": "Kumpulan proyek yang dibangun dengan standar teknologi industri terkini"
+        "subtitle": "Kumpulan proyek yang dibangun dengan standar teknologi industri terkini.",
+        "p1": "Project tidak ditemukan"
+    },
+    "contact": {
+        "title": "Siap Memulai ",
+        "title_highlight": "Proyek Anda?",
+        "subtitle": "Mari diskusikan bagaimana keahlian teknis saya dapat membantu membangun solusi inovatif untuk kebutuhan Anda.",
+        "cta": "Hubungi Saya"
+    },
+    "projects_page": {
+        "title": "Proyek Saya",
+        "subtitle": "Kumpulan proyek yang dibangun dengan standar teknologi industri terkini.",
+        "p1": "Project tidak ditemukan",
+        "cta_show_more": "Lihat Lebih Banyak",
+        "cta_show_less": "Lihat Lebih Sedikit"
+    },
+    "project_card": {
+        "tech_stack": "Teknologi",
+        "demo": "Demo",
+        "repo": "Kode",
+        "detail": "Detail"
+    },
+    "project_detail": {
+        "live_demo": "Demo Langsung",
+        "repo": "Repositori",
+        "screenshot": "tangkapan layar"
+    },
+    "footer": {
+        "rights": "Hak cipta dilindungi undang-undang."
     }
 }

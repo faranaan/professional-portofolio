@@ -12,12 +12,40 @@
     },
     "about": {
         "title": "About Me",
-        "p1": "Currently a 2nd-year Informatics Engineering student at Electronic Engineering Polytechnic Institute of Surabaya(EEPIS). I am passionate about transforming complex challenges into efficient, high-impact digital solutions.",
+        "p1": "Currently a 2nd-year Informatics Engineering student at Electronic Engineering Polytechnic Institute of Surabaya (EEPIS). I am passionate about transforming complex challenges into efficient, high-impact digital solutions.",
         "p2": "I don't just write code; I build experiences. My focus is on developing performant, clean, and maintainable applications that solve real-world problems.",
         "p3": "I thrive in collaborative environments, prioritizing teamwork and collective growth. By implementing Agile principles, I ensure a transparent and adaptive development process that delivers consistent value to both users and clients."
     },
-        "projects_page": {
+    "projects_page": {
         "title": "My Projects",
-        "subtitle": "A collection of projects built with current industry-standard technologies."
+        "subtitle": "A collection of projects built with current industry-standard technologies.",
+        "p1": "Project not found"
+    },
+    "contact": {
+        "title": "Ready to Start ",
+        "title_highlight": "Your Project?",
+        "subtitle": "Let's discuss how my technical expertise can help build innovative solutions for your needs.",
+        "cta": "Get In Touch"
+    },
+    "projects_page": {
+        "title": "My Projects",
+        "subtitle": "A collection of projects built with current industry-standard technologies.",
+        "p1": "Project not found",
+        "cta_show_more": "See More",
+        "cta_show_less": "See Less"
+    },
+    "project_card": {
+        "tech_stack": "Tech Stack",
+        "demo": "Demo",
+        "repo": "Repo",
+        "detail": "Detail"
+    },
+    "project_detail": {
+        "live_demo": "Live Demo",
+        "repo": "Repository",
+        "screenshot": "screenshot"
+    },
+    "footer": {
+        "rights": "All rights reserved."
     }
 }

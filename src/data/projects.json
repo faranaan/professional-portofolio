@@ -8,7 +8,247 @@
         },
         "techStack": ["React", "HTML", "CSS"],
         "image": "/images/smartroom-mock.png",
+        "gallery": [
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png"
+        ],
         "repoLink": "https://github.com",
-        "demoLink": "https://youtube.com"
+        "demoLink": "https://youtube.com",
+        "caseStudy": [
+            {
+                "type": "hero-section",
+                "badge": "ENTERPRISE SOLUTION",
+                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "subtitle": { 
+                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
+                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                },
+                "stats": [
+                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
+                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": "THE PROBLEM",
+                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "content": { 
+                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
+                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                }
+            },
+            {
+                "type": "feature-grid",
+                "badge": "PLATFORM FEATURES",
+                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "items": [
+                    { 
+                        "icon": "Calendar", 
+                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
+                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                    },
+                    { 
+                        "icon": "ShieldCheck", 
+                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
+                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                    },
+                    { 
+                        "icon": "FileText", 
+                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
+                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "smartroom2",
+        "title": "SmartRoom",
+        "description": {
+            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
+            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+        },
+        "techStack": ["React", "HTML", "CSS"],
+        "image": "/images/smartroom-mock.png",
+        "gallery": [
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png"
+        ],
+        "repoLink": "https://github.com",
+        "demoLink": "https://youtube.com",
+        "caseStudy": [
+            {
+                "type": "hero-section",
+                "badge": "ENTERPRISE SOLUTION",
+                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "subtitle": { 
+                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
+                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                },
+                "stats": [
+                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
+                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": "THE PROBLEM",
+                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "content": { 
+                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
+                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                }
+            },
+            {
+                "type": "feature-grid",
+                "badge": "PLATFORM FEATURES",
+                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "items": [
+                    { 
+                        "icon": "Calendar", 
+                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
+                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                    },
+                    { 
+                        "icon": "ShieldCheck", 
+                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
+                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                    },
+                    { 
+                        "icon": "FileText", 
+                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
+                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "smartroom3",
+        "title": "SmartRoom",
+        "description": {
+            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
+            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+        },
+        "techStack": ["React", "HTML", "CSS"],
+        "image": "/images/smartroom-mock.png",
+        "gallery": [
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png"
+        ],
+        "repoLink": "https://github.com",
+        "demoLink": "https://youtube.com",
+        "caseStudy": [
+            {
+                "type": "hero-section",
+                "badge": "ENTERPRISE SOLUTION",
+                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "subtitle": { 
+                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
+                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                },
+                "stats": [
+                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
+                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": "THE PROBLEM",
+                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "content": { 
+                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
+                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                }
+            },
+            {
+                "type": "feature-grid",
+                "badge": "PLATFORM FEATURES",
+                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "items": [
+                    { 
+                        "icon": "Calendar", 
+                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
+                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                    },
+                    { 
+                        "icon": "ShieldCheck", 
+                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
+                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                    },
+                    { 
+                        "icon": "FileText", 
+                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
+                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "smartroom4",
+        "title": "SmartRoom",
+        "description": {
+            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
+            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+        },
+        "techStack": ["React", "HTML", "CSS"],
+        "image": "/images/smartroom-mock.png",
+        "gallery": [
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png",
+            "/images/smartroom-mock.png"
+        ],
+        "repoLink": "https://github.com",
+        "demoLink": "https://youtube.com",
+        "caseStudy": [
+            {
+                "type": "hero-section",
+                "badge": "ENTERPRISE SOLUTION",
+                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "subtitle": { 
+                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
+                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                },
+                "stats": [
+                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
+                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": "THE PROBLEM",
+                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "content": { 
+                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
+                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                }
+            },
+            {
+                "type": "feature-grid",
+                "badge": "PLATFORM FEATURES",
+                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "items": [
+                    { 
+                        "icon": "Calendar", 
+                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
+                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                    },
+                    { 
+                        "icon": "ShieldCheck", 
+                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
+                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                    },
+                    { 
+                        "icon": "FileText", 
+                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
+                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                    }
+                ]
+            }
+        ]
     }
 ]

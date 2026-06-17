@@ -1,7 +1,40 @@
 @import "tailwindcss";
+/* Kunci Ajaib 1: Memaksa Tailwind v4 membaca file config milikmu */
+@config "../tailwind.config.js"; 
+
+/* Kunci Ajaib 2: Mengaktifkan fitur Dark Mode Toggle manual di versi 4 */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
     html {
         scroll-behavior: smooth;
+    }
+    /* Blok body { @apply ... } kita hapus agar tidak bentrok, 
+       karena Layout.tsx sudah mengambil alih tugas background */
+}
+
+@layer utilities {
+    /* 1. Pattern Grid ala SINDIKA untuk Light Mode (garis gelap tipis) */
+    .bg-grid-pattern {
+        background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        background-size: 40px 40px; /* Jarak antar garis kotak */
+    }
+
+    /* 2. Pattern Grid ala SINDIKA untuk Dark Mode (garis putih tipis) */
+    .dark .bg-grid-pattern {
+        background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* 3. Teks Gradasi ala SINDIKA (Siap dipakai nanti) */
+    .text-gradient-primary {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-400;
+    }
+    
+    .dark .text-gradient-primary {
+        @apply bg-gradient-to-r from-blue-400 to-teal-300; /* Warna lebih pop/neon di dark mode */
     }
 }

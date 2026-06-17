@@ -1,13 +1,20 @@
 import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { SiReact, SiGithub, SiHtml5, SiCss } from "react-icons/si";
+import { SiReact, SiGithub, SiHtml5, SiCss, SiTypescript, SiTailwindcss, SiLaravel, SiPhp, SiFlutter, SiPostgresql } from "react-icons/si";
+import { motion } from "framer-motion"; // Import motion
 import type { JSX } from "react";
 
 const techIcons: { [key: string]: JSX.Element } = {
     "React": <SiReact className="text-[#61DAFB]" />,
     "HTML": <SiHtml5 className="text-[#E34F26]" />,
     "CSS": <SiCss className="text-[#1572B6]" />,
+    "TypeScript": <SiTypescript className="text-[#3178C6]" />,
+    "Tailwind CSS": <SiTailwindcss className="text-[#06B6D4]" />,
+    "Laravel": <SiLaravel className="text-[#FF2D20]" />,
+    "PHP": <SiPhp className="text-[#777BB4]" />,
+    "Flutter": <SiFlutter className="text-[#02569B]" />,
+    "PostgreSQL": <SiPostgresql className="text-[#4169E1]" />
 };
 
 interface ProjectProps {
@@ -28,42 +35,69 @@ export default function ProjectCard({ project }: ProjectProps) {
     const description = project.description[currentLang] || project.description.en;
 
     return (
-        <div className="group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-            <div className="relative h-56 w-full overflow-hidden bg-gray-200">
-                <img src={project.image} alt="project.title" className="w-full h-full object-cover transition-transform dudration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gray-900/80 opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex flex-col justify-center items-center p-6 backdrop-blur-sm">
-                    <p className="text-white font-medium mb-4 tracking-wide text-sm uppercase">Tech Stack</p>
+        <motion.div 
+            whileHover={{ y: -8 }} // Efek kartu terangkat saat hover
+            transition={{ type: "spring", stiffness: 300 }}
+            className="group flex flex-col h-full bg-surface-light dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
+        >
+            <div className="relative h-56 w-full overflow-hidden bg-gray-200 dark:bg-gray-800">
+                <motion.img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                
+                {/* Overlay Tech Stack */}
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm flex flex-col justify-center items-center p-6 transition-opacity duration-300"
+                >
+                    <p className="text-white font-medium mb-4 tracking-wide text-sm uppercase">
+                        {t('project_card.tech_stack')}
+                    </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         {project.techStack.map((tech, index) => (
-                            <div key={index} className="flex flex-col items-center gap-1">
+                            <motion.div 
+                                key={index} 
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                whileHover={{ scale: 1.2 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: index * 0.05 }}
+                                className="flex flex-col items-center gap-1"
+                            >
                                 <span className="text-2xl text-white">
                                     {techIcons[tech] || <span className="text-xs">🛠️</span>}
                                 </span>
                                 <span className="text-[10px] text-gray-300">{tech}</span>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
+
             <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">
+                    {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow line-clamp-3 transition-colors">
                     {description}
                 </p>
-                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-100">
+                
+                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 transition-colors">
                     {project.demoLink && (
-                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
-                            <ExternalLink size={16} /> Demo
+                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                            <ExternalLink size={16} /> {t('project_card.demo')}
                         </a>
                     )}
-                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
-                        <SiGithub size={16} /> Repo
+                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        <SiGithub size={16} /> {t('project_card.repo')}
                     </a>
-                    <Link to={`/projects/${project.id}`} className="ml-auot text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors">
-                        {t('cta_projects', 'Detail')} →
+                    <Link to={`/projects/${project.id}`} className="ml-auto text-sm font-medium text-gray-900 dark:text-white hover:text-accent dark:hover:text-blue-400 transition-colors">
+                        {t('project_card.detail')} →
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
