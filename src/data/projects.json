@@ -162,128 +162,81 @@
         ]
     },
     {
-        "id": "smartroom3",
+        "id": "smartroom",
         "title": "SmartRoom",
         "description": {
-            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
-            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
+            "id": "Platform manajemen fasilitas dan peminjaman ruangan kampus berbasis web responsif yang mengeliminasi birokrasi kertas melalui validasi jadwal otomatis dan sistem multi-tenant.",
+            "en": "A responsive web-based campus facility and room booking platform that eliminates paper bureaucracy through automated schedule validation and a multi-tenant system."
         },
-        "techStack": ["React", "HTML", "CSS"],
-        "image": "/images/smartroom-mock.png",
+        "techStack": ["React", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS"],
+        "image": "/images/smartroom/hero.png",
         "gallery": [
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png"
+            "/images/smartroom/hero.png",
+            "/images/smartroom/dashboard.png",
+            "/images/smartroom/booking.png",
+            "/images/smartroom/admin.png"
         ],
-        "repoLink": "https://github.com",
-        "demoLink": "https://youtube.com",
+        "repoLinks": [
+            { "label": "Frontend Repo", "url": "https://github.com/faranaan/SmartRoom-frontend" },
+            { "label": "Backend Repo", "url": "https://github.com/faranaan/SmartRoom-backend" }
+        ],
+        "demoLink": "https://smart-room-frontend.vercel.app/",
+        "videoLinks": [
+            { "label": "Video Demo", "url": "https://youtu.be/7bltCPuRSt0" }
+        ],
         "caseStudy": [
             {
                 "type": "hero-section",
-                "badge": "ENTERPRISE SOLUTION",
-                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
+                "badge": "FULL-STACK SOLO PROJECT",
+                "title": { "id": "SmartRoom: Digitalisasi Fasilitas Kampus", "en": "SmartRoom: Campus Facility Digitalization" },
                 "subtitle": { 
-                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
-                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
+                    "id": "Sistem peminjaman ruang independen yang mentransformasi pencatatan manual menjadi platform terpusat. Dibangun secara utuh mulai dari arsitektur backend hingga deployment frontend di Vercel.", 
+                    "en": "An independent room booking system transforming manual recording into a centralized platform. Built entirely from backend architecture to frontend deployment on Vercel." 
                 },
                 "stats": [
-                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
-                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
+                    { "value": "100%", "label": { "id": "Paperless", "en": "Paperless" } },
+                    { "value": "3", "label": { "id": "User Roles", "en": "User Roles" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "THE PROBLEM",
-                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "badge": "LATAR BELAKANG",
+                "title": { "id": "Inefisiensi Peminjaman Konvensional", "en": "Inefficiency of Conventional Booking" },
                 "content": { 
-                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
-                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                    "id": "Proses peminjaman ruangan di lingkungan kampus umumnya masih menggunakan kertas yang rentan hilang atau terselip. Hal ini menyebabkan alur kerja yang tidak efisien—jadwal sering terlewat, data peminjaman tidak terekap dengan baik, dan sangat rentan terjadi bentrok jadwal antar civitas akademika. SmartRoom dibangun untuk mengatasi kekacauan ini dengan menyediakan sistem pemantauan yang transparan dan *real-time*.", 
+                    "en": "The room booking process in campus environments typically still relies on paper, which is prone to being lost or misplaced. This leads to inefficient workflows—schedules are often missed, booking data is poorly recorded, and it is highly susceptible to scheduling conflicts among the academic community. SmartRoom was built to overcome this chaos by providing a transparent and real-time monitoring system." 
                 }
             },
             {
                 "type": "feature-grid",
-                "badge": "PLATFORM FEATURES",
-                "title": { "id": "Fitur Utama", "en": "Key Features" },
+                "badge": "FITUR UTAMA",
+                "title": { "id": "Arsitektur Multi-Peran & Manajemen Ruang", "en": "Multi-Role Architecture & Room Management" },
                 "items": [
                     { 
                         "icon": "Calendar", 
-                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
-                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
+                        "title": { "id": "Eksplorasi & Pengajuan Jadwal", "en": "Schedule Exploration & Submission" }, 
+                        "desc": { "id": "End-user (Mahasiswa/Dosen) dapat melihat ketersediaan ruang secara live dan mengajukan form peminjaman anti-bentrok.", "en": "End-users (Students/Lecturers) can view live room availability and submit clash-free booking forms." } 
                     },
                     { 
                         "icon": "ShieldCheck", 
-                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
-                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
+                        "title": { "id": "Moderasi & Manajemen Admin", "en": "Admin Moderation & Management" }, 
+                        "desc": { "id": "Staf/Admin memiliki kontrol untuk menyetujui atau menolak reservasi, serta menambah dan mengelola inventaris ruangan.", "en": "Staff/Admins have control to approve or reject reservations, as well as add and manage room inventory." } 
                     },
                     { 
-                        "icon": "FileText", 
-                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
-                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
+                        "icon": "LayoutDashboard", 
+                        "title": { "id": "Super Admin Multi-Tenant", "en": "Multi-Tenant Super Admin" }, 
+                        "desc": { "id": "Manajemen otentikasi global untuk menambahkan institusi kampus baru dan mendistribusikan kode unik login aplikasi.", "en": "Global authentication management to provision new campus institutions and distribute unique app login codes." } 
                     }
-                ]
-            }
-        ]
-    },
-    {
-        "id": "smartroom4",
-        "title": "SmartRoom",
-        "description": {
-            "id": "Sistem peminjaman ruangan kampus untuk memudahkan peminjaman ruangan secara efisien",
-            "en": "An integrated campus room booking system to streamline facility scheduling efficiently."
-        },
-        "techStack": ["React", "HTML", "CSS"],
-        "image": "/images/smartroom-mock.png",
-        "gallery": [
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png",
-            "/images/smartroom-mock.png"
-        ],
-        "repoLink": "https://github.com",
-        "demoLink": "https://youtube.com",
-        "caseStudy": [
-            {
-                "type": "hero-section",
-                "badge": "ENTERPRISE SOLUTION",
-                "title": { "id": "Sistem Manajemen Ruang", "en": "Room Management System" },
-                "subtitle": { 
-                    "id": "Platform cerdas untuk mencegah bentrok jadwal dan mengoptimalkan penggunaan fasilitas kampus secara real-time.", 
-                    "en": "A smart platform to prevent schedule clashes and optimize campus facility usage in real-time." 
-                },
-                "stats": [
-                    { "value": "100%", "label": { "id": "Akurasi Jadwal", "en": "Schedule Accuracy" } },
-                    { "value": "Real-time", "label": { "id": "Monitoring", "en": "Monitoring" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "THE PROBLEM",
-                "title": { "id": "Masalah (Problem)", "en": "The Problem" },
+                "badge": "ALUR KERJA",
+                "title": { "id": "Siklus Pemrosesan Data & Validasi", "en": "Data Processing & Validation Cycle" },
                 "content": { 
-                    "id": "Proses peminjaman ruangan di kampus masih manual menggunakan kertas, sehingga sering terjadi bentrok jadwal dan mahasiswa kesulitan melihat ketersediaan ruangan secara real-time.", 
-                    "en": "The room booking process was manual using paper, leading to frequent schedule clashes and difficulty for students to check room availability in real-time." 
+                    "id": "Aplikasi memfasilitasi alur kerja terintegrasi: Pengguna memilih ruang -> Backend ASP.NET Core memvalidasi ketersediaan waktu -> Admin meninjau pengajuan (Approve/Reject). Di lapisan teratas, Super Admin bertindak sebagai pemegang kendali ekosistem, memetakan pengguna ke segmentasi kampus mereka masing-masing agar data di dalam database tetap terisolasi dan aman untuk setiap institusi.", 
+                    "en": "The application facilitates an integrated workflow: Users select a room -> The ASP.NET Core backend validates time availability -> Admins review the submission (Approve/Reject). At the top layer, the Super Admin acts as the ecosystem controller, mapping users to their respective campus segments to ensure database data remains isolated and secure for each institution." 
                 }
-            },
-            {
-                "type": "feature-grid",
-                "badge": "PLATFORM FEATURES",
-                "title": { "id": "Fitur Utama", "en": "Key Features" },
-                "items": [
-                    { 
-                        "icon": "Calendar", 
-                        "title": { "id": "Kalender Interaktif", "en": "Interactive Calendar" }, 
-                        "desc": { "id": "Visualisasi real-time jadwal ruangan.", "en": "Real-time visualization of room schedules." } 
-                    },
-                    { 
-                        "icon": "ShieldCheck", 
-                        "title": { "id": "Role-based Auth", "en": "Role-based Auth" }, 
-                        "desc": { "id": "Akses berbeda untuk Admin & Mahasiswa.", "en": "Different access for Admins & Students." } 
-                    },
-                    { 
-                        "icon": "FileText", 
-                        "title": { "id": "Export PDF", "en": "PDF Export" }, 
-                        "desc": { "id": "Export laporan data peminjaman ke PDF.", "en": "Export booking reports to PDF." } 
-                    }
-                ]
             }
         ]
     }
