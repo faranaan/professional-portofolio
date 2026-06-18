@@ -7,24 +7,21 @@
             "en": "A multi-platform helpdesk ticketing system to optimize support services with automated SLA tracking, knowledge base, and real-time performance metrics."
         },
         "techStack": ["Flutter", "React", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS"],
-        "image": "/images/tixdesk/hero.png",
+        "image": "/images/tixdesk/tixdesk-image-1.png",
         "gallery": [
-            "/images/tixdesk/hero.png",
-            "/images/tixdesk/web-dashboard.png",
-            "/images/tixdesk/mobile-app.png",
-            "/images/tixdesk/knowledge-base.png"
+            "/images/tixdesk/tixdesk-image-1.png"
         ],
         "repoLink": "",
         "demoLink": "https://play.google.com/store/apps/details?id=com.tixdesk.app&pcampaignid=web_share",
         "videoLinks": [
-            { "label": "Mobile Demo v1", "url": "https://youtu.be/6ge-_EoneJQ?si=xnBFXUAnQrRdrFq0" },
-            { "label": "Mobile Demo v2", "url": "https://youtu.be/WzDYqOasQBM?si=CZW0kyezSshpnF8z" },
-            { "label": "Web App Demo", "url": "https://youtu.be/5m18vKVVrgI?si=IlSZFJMvtzjX33Lh" }
+            { "label": { "id": "Demo Mobile v1", "en": "Mobile Demo v1" }, "url": "https://youtu.be/6ge-_EoneJQ?si=xnBFXUAnQrRdrFq0" },
+            { "label": { "id": "Demo Mobile v2", "en": "Mobile Demo v2" }, "url": "https://youtu.be/WzDYqOasQBM?si=CZW0kyezSshpnF8z" },
+            { "label": { "id": "Demo Web App", "en": "Web App Demo" }, "url": "https://youtu.be/5m18vKVVrgI?si=IlSZFJMvtzjX33Lh" }
         ],
         "caseStudy": [
             {
                 "type": "hero-section",
-                "badge": "ENTERPRISE HELPDESK SYSTEM",
+                "badge": { "id": "SISTEM HELPDESK ENTERPRISE", "en": "ENTERPRISE HELPDESK SYSTEM" },
                 "title": { "id": "TIXDESK: Solusi Terpadu Support Ticketing", "en": "TIXDESK: Unified Support Ticketing Solution" },
                 "subtitle": { 
                     "id": "Platform cerdas untuk mengeliminasi duplikasi tugas, mempercepat waktu respons, dan memantau kinerja agent secara terpusat. Dikembangkan dengan metodologi Scrum.", 
@@ -32,12 +29,12 @@
                 },
                 "stats": [
                     { "value": "Multi", "label": { "id": "Platform (Web & App)", "en": "Platform (Web & App)" } },
-                    { "value": "SLA", "label": { "id": "Real-time Tracking", "en": "Real-time Tracking" } }
+                    { "value": "SLA", "label": { "id": "Pelacakan Real-time", "en": "Real-time Tracking" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "LATAR BELAKANG",
+                "badge": { "id": "LATAR BELAKANG", "en": "BACKGROUND" },
                 "title": { "id": "Mengatasi Kekacauan Layanan Support", "en": "Solving Support Service Chaos" },
                 "content": { 
                     "id": "Sebelum adanya TIXDESK, penanganan keluhan sering kali kacau: support agent mengerjakan keluhan yang duplikat, tidak ada penentuan skala prioritas sehingga request penting terlewat, waktu respons yang lambat, dan tidak adanya database solusi (knowledge base). Selain itu, pihak manajemen tidak memiliki metrik ukur kinerja yang jelas terhadap efektivitas tim support.", 
@@ -46,7 +43,7 @@
             },
             {
                 "type": "feature-grid",
-                "badge": "FITUR UTAMA",
+                "badge": { "id": "FITUR UTAMA", "en": "KEY FEATURES" },
                 "title": { "id": "Arsitektur Solusi & Logika Bisnis", "en": "Solution Architecture & Business Logic" },
                 "items": [
                     { 
@@ -73,7 +70,7 @@
             },
             {
                 "type": "text-heading",
-                "badge": "WORKFLOW & AKSES",
+                "badge": { "id": "WORKFLOW & AKSES", "en": "WORKFLOW & ACCESS" },
                 "title": { "id": "Alur Kerja & Pembagian Hak Akses", "en": "Workflow & Role-based Access" },
                 "content": { 
                     "id": "TIXDESK mendukung alur kerja end-to-end yang mulus: End User membuat tiket -> Support Agent mengambil & memproses tiket -> Tiket berstatus Resolved. Jika masalah belum tuntas, user dapat mengajukan 'Re-Open'. Sistem ini membagi akses menjadi 4 peran spesifik: End User (tracking & self-service), Support Agent (penanganan tiket), Support Lead (assign & eskalasi), dan Admin (konfigurasi sistem & SLA).", 
@@ -90,12 +87,9 @@
             "en": "A real-time earthquake monitoring responsive platform with BMKG API integration, interactive mapping, and smart disaster notifications."
         },
         "techStack": ["React", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS", "Docker"],
-        "image": "/images/quakealert/hero.png",
+        "image": "/images/quakealert/quakealert-image-1.png",
         "gallery": [
-            "/images/quakealert/hero.png",
-            "/images/quakealert/interactive-map.png",
-            "/images/quakealert/analytics.png",
-            "/images/quakealert/notification.png"
+            "/images/quakealert/quakealert-image-1.png"
         ],
         "repoLink": "https://github.com/fathss/quake-alert-fe",
         "demoLink": "https://quakealertweb-production.up.railway.app/",
@@ -103,20 +97,20 @@
         "caseStudy": [
             {
                 "type": "hero-section",
-                "badge": "REAL-TIME DISASTER TRACKING",
+                "badge": { "id": "PELACAKAN BENCANA REAL-TIME", "en": "REAL-TIME DISASTER TRACKING" },
                 "title": { "id": "QuakeAlert: Sistem Informasi Gempa Cerdas", "en": "QuakeAlert: Smart Earthquake Information System" },
                 "subtitle": { 
                     "id": "Menghadirkan informasi kegempaan langsung dari BMKG dengan visualisasi peta dinamis, analisis historis, dan peringatan instan untuk seluruh masyarakat Indonesia.", 
                     "en": "Delivering live earthquake information from BMKG with dynamic map visualization, historical analysis, and instant alerts for the Indonesian public." 
                 },
                 "stats": [
-                    { "value": "Real-time", "label": { "id": "BMKG Integration", "en": "BMKG Integration" } },
-                    { "value": "Live", "label": { "id": "Push Notifications", "en": "Push Notifications" } }
+                    { "value": "Real-time", "label": { "id": "Integrasi BMKG", "en": "BMKG Integration" } },
+                    { "value": "Live", "label": { "id": "Notifikasi Push", "en": "Push Notifications" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "LATAR BELAKANG",
+                "badge": { "id": "LATAR BELAKANG", "en": "BACKGROUND" },
                 "title": { "id": "Aksesibilitas Informasi Kebencanaan", "en": "Disaster Information Accessibility" },
                 "content": { 
                     "id": "Meskipun informasi gempa sangat krusial bagi masyarakat Indonesia, banyak platform web yang tersedia saat ini kurang intuitif, sulit dipahami secara visual, dan tidak memfasilitasi peringatan instan secara personal. QuakeAlert dibangun agar masyarakat merasa lebih aman, *aware*, dan nyaman dalam memantau kondisi gempa kapan saja melalui antarmuka yang modern dan responsif.", 
@@ -125,7 +119,7 @@
             },
             {
                 "type": "feature-grid",
-                "badge": "FITUR UTAMA",
+                "badge": { "id": "FITUR UTAMA", "en": "KEY FEATURES" },
                 "title": { "id": "Arsitektur Solusi & Kapabilitas", "en": "Solution Architecture & Capabilities" },
                 "items": [
                     { 
@@ -152,7 +146,7 @@
             },
             {
                 "type": "text-heading",
-                "badge": "WORKFLOW & AKSES",
+                "badge": { "id": "WORKFLOW & AKSES", "en": "WORKFLOW & ACCESS" },
                 "title": { "id": "Alur Kerja Sistem Otomatis", "en": "Automated System Workflow" },
                 "content": { 
                     "id": "Aplikasi ini dirancang untuk bekerja secara otonom. Saat ada gempa terbaru, backend ASP.NET Core akan menarik data, menyimpannya di PostgreSQL, lalu menampilkannya secara langsung di peta frontend React. Pengguna terbagi menjadi dua: Guest (mendapat visualisasi penuh & push notif web) dan Non-Guest/Login (mendapat tambahan perlindungan berupa notifikasi langsung ke Email mereka saat terjadi gempa).", 
@@ -169,38 +163,35 @@
             "en": "A responsive web-based campus facility and room booking platform that eliminates paper bureaucracy through automated schedule validation and a multi-tenant system."
         },
         "techStack": ["React", "TypeScript", "ASP.NET Core", "PostgreSQL", "Tailwind CSS"],
-        "image": "/images/smartroom/hero.png",
+        "image": "/images/smartroom/smartroom-image-1.png",
         "gallery": [
-            "/images/smartroom/hero.png",
-            "/images/smartroom/dashboard.png",
-            "/images/smartroom/booking.png",
-            "/images/smartroom/admin.png"
+            "/images/smartroom/smartroom-image-1.png"
         ],
         "repoLinks": [
-            { "label": "Frontend Repo", "url": "https://github.com/faranaan/SmartRoom-frontend" },
-            { "label": "Backend Repo", "url": "https://github.com/faranaan/SmartRoom-backend" }
+            { "label": { "id": "Repo Frontend", "en": "Frontend Repo" }, "url": "https://github.com/faranaan/SmartRoom-frontend" },
+            { "label": { "id": "Repo Backend", "en": "Backend Repo" }, "url": "https://github.com/faranaan/SmartRoom-backend" }
         ],
         "demoLink": "https://smart-room-frontend.vercel.app/",
         "videoLinks": [
-            { "label": "Video Demo", "url": "https://youtu.be/7bltCPuRSt0" }
+            { "label": { "id": "Demo Sistem", "en": "System Walkthrough" }, "url": "https://youtu.be/7bltCPuRSt0" }
         ],
         "caseStudy": [
             {
                 "type": "hero-section",
-                "badge": "FULL-STACK SOLO PROJECT",
+                "badge": { "id": "PROYEK SOLO FULL-STACK", "en": "FULL-STACK SOLO PROJECT" },
                 "title": { "id": "SmartRoom: Digitalisasi Fasilitas Kampus", "en": "SmartRoom: Campus Facility Digitalization" },
                 "subtitle": { 
                     "id": "Sistem peminjaman ruang independen yang mentransformasi pencatatan manual menjadi platform terpusat. Dibangun secara utuh mulai dari arsitektur backend hingga deployment frontend di Vercel.", 
                     "en": "An independent room booking system transforming manual recording into a centralized platform. Built entirely from backend architecture to frontend deployment on Vercel." 
                 },
                 "stats": [
-                    { "value": "100%", "label": { "id": "Paperless", "en": "Paperless" } },
-                    { "value": "3", "label": { "id": "User Roles", "en": "User Roles" } }
+                    { "value": "100%", "label": { "id": "Bebas Kertas", "en": "Paperless" } },
+                    { "value": "3", "label": { "id": "Peran Pengguna", "en": "User Roles" } }
                 ]
             },
             {
                 "type": "text-heading",
-                "badge": "LATAR BELAKANG",
+                "badge": { "id": "LATAR BELAKANG", "en": "BACKGROUND" },
                 "title": { "id": "Inefisiensi Peminjaman Konvensional", "en": "Inefficiency of Conventional Booking" },
                 "content": { 
                     "id": "Proses peminjaman ruangan di lingkungan kampus umumnya masih menggunakan kertas yang rentan hilang atau terselip. Hal ini menyebabkan alur kerja yang tidak efisien—jadwal sering terlewat, data peminjaman tidak terekap dengan baik, dan sangat rentan terjadi bentrok jadwal antar civitas akademika. SmartRoom dibangun untuk mengatasi kekacauan ini dengan menyediakan sistem pemantauan yang transparan dan *real-time*.", 
@@ -209,7 +200,7 @@
             },
             {
                 "type": "feature-grid",
-                "badge": "FITUR UTAMA",
+                "badge": { "id": "FITUR UTAMA", "en": "KEY FEATURES" },
                 "title": { "id": "Arsitektur Multi-Peran & Manajemen Ruang", "en": "Multi-Role Architecture & Room Management" },
                 "items": [
                     { 
@@ -231,11 +222,163 @@
             },
             {
                 "type": "text-heading",
-                "badge": "ALUR KERJA",
+                "badge": { "id": "ALUR KERJA", "en": "WORKFLOW & ACCESS" },
                 "title": { "id": "Siklus Pemrosesan Data & Validasi", "en": "Data Processing & Validation Cycle" },
                 "content": { 
                     "id": "Aplikasi memfasilitasi alur kerja terintegrasi: Pengguna memilih ruang -> Backend ASP.NET Core memvalidasi ketersediaan waktu -> Admin meninjau pengajuan (Approve/Reject). Di lapisan teratas, Super Admin bertindak sebagai pemegang kendali ekosistem, memetakan pengguna ke segmentasi kampus mereka masing-masing agar data di dalam database tetap terisolasi dan aman untuk setiap institusi.", 
                     "en": "The application facilitates an integrated workflow: Users select a room -> The ASP.NET Core backend validates time availability -> Admins review the submission (Approve/Reject). At the top layer, the Super Admin acts as the ecosystem controller, mapping users to their respective campus segments to ensure database data remains isolated and secure for each institution." 
+                }
+            }
+        ]
+    },
+    {
+        "id": "tbcheck",
+        "title": "TBCheck",
+        "description": {
+            "id": "Aplikasi mobile surveilans medis untuk pemantauan pasien TBC dengan fitur pelacakan lokasi real-time, pengingat minum obat, dan pemetaan rumah sakit.",
+            "en": "A medical surveillance mobile app for TB patient monitoring, featuring real-time location tracking, medication reminders, and hospital mapping."
+        },
+        "techStack": ["Flutter", "ASP.NET Core", "PostgreSQL", "Docker", "Figma"],
+        "image": "/images/tbcheck/tbcheck-image-1.png",
+        "gallery": [
+            "/images/tbcheck/tbcheck-image-1.png"
+        ],
+        "repoLinks": [
+            { "label": { "id": "Repo Mobile (Flutter)", "en": "Mobile (Flutter) Repo" }, "url": "https://github.com/fathss/tb-check-mobile" },
+            { "label": { "id": "Repo Backend (.NET)", "en": "Backend (.NET) Repo" }, "url": "https://github.com/fathss/tb-check-be" }
+        ],
+        "demoLink": "",
+        "videoLinks": [
+            { "label": { "id": "Demo Aplikasi", "en": "App Demo Walkthrough" }, "url": "https://youtu.be/r3SdxDvQ3Wg?si=7otLr5q1lXCC-8g7" }
+        ],
+        "caseStudy": [
+            {
+                "type": "hero-section",
+                "badge": { "id": "APLIKASI SURVEILANS MEDIS", "en": "HEALTHCARE SURVEILLANCE APP" },
+                "title": { "id": "TBCheck: Pantau Pengobatan TBC Lebih Cerdas", "en": "TBCheck: Smarter TB Treatment Monitoring" },
+                "subtitle": { 
+                    "id": "Platform medis dua arah yang menjembatani pengawasan ketat dari rumah sakit dengan kemudahan penjadwalan obat mandiri bagi pasien.", 
+                    "en": "A two-way medical platform bridging strict hospital supervision with the convenience of independent medication scheduling for patients." 
+                },
+                "stats": [
+                    { "value": "Live", "label": { "id": "Pelacakan Lokasi", "en": "Location Tracking" } },
+                    { "value": "100%", "label": { "id": "Catatan Minum Obat", "en": "Medication Record" } }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": { "id": "LATAR BELAKANG", "en": "BACKGROUND" },
+                "title": { "id": "Tantangan Kepatuhan Pasien Tuberkulosis", "en": "The Challenge of Tuberculosis Patient Adherence" },
+                "content": { 
+                    "id": "Pengobatan penyakit TBC membutuhkan waktu yang panjang (minimal 6 bulan) dan kedisiplinan tingkat tinggi. Selama ini, rumah sakit kesulitan melacak apakah pasien benar-benar rutin meminum obatnya setiap hari dan di mana keberadaan mereka. TBCheck dikembangkan sebagai solusi *win-win*: Rumah sakit dapat melakukan surveilans lokasi dan aktivitas pasien secara akurat, sementara pasien dipermudah dengan alarm pengingat obat dan navigasi ke faskes terdekat.", 
+                    "en": "Tuberculosis treatment requires a long duration (minimum 6 months) and strict discipline. Historically, hospitals have struggled to track whether patients routinely take their medication daily and monitor their whereabouts. TBCheck was developed as a win-win solution: Hospitals can accurately conduct surveillance on patient locations and activities, while patients are assisted with medication alarms and navigation to nearby health facilities." 
+                }
+            },
+            {
+                "type": "feature-grid",
+                "badge": { "id": "FITUR UTAMA", "en": "KEY FEATURES" },
+                "title": { "id": "Kapabilitas & Solusi Medis", "en": "Medical Capabilities & Solutions" },
+                "items": [
+                    { 
+                        "icon": "MapPinned", 
+                        "title": { "id": "Pemetaan Faskes & Rute", "en": "Facility Mapping & Routing" }, 
+                        "desc": { "id": "Pasien dapat melacak Rumah Sakit terdekat, mendapatkan rute navigasi instan, dan melakukan panggilan telepon darurat.", "en": "Patients can track the nearest Hospital, get instant navigation routes, and make emergency phone calls." } 
+                    },
+                    { 
+                        "icon": "BellRing", 
+                        "title": { "id": "Alarm & Histori Obat", "en": "Medication Alarms & History" }, 
+                        "desc": { "id": "Notifikasi pengingat mandiri yang memungkinkan pasien mengatur jadwal minum obat harian dan mencatat riwayat konsumsi.", "en": "Self-managed reminder notifications allowing patients to set daily medication schedules and log their consumption history." } 
+                    },
+                    { 
+                        "icon": "Radio", 
+                        "title": { "id": "Surveilans Dokter/Admin", "en": "Doctor/Admin Surveillance" }, 
+                        "desc": { "id": "Pihak rumah sakit dapat mengawasi riwayat pergerakan lokasi (tracking) dan kepatuhan minum obat setiap pasien yang di-assign.", "en": "Hospital staff can monitor the location movement history (tracking) and medication adherence of every assigned patient." } 
+                    },
+                    { 
+                        "icon": "LayoutDashboard", 
+                        "title": { "id": "Manajemen Multi-RS", "en": "Multi-Hospital Management" }, 
+                        "desc": { "id": "Peran Super Admin yang didedikasikan untuk mengelola entitas banyak rumah sakit sekaligus dalam satu ekosistem backend.", "en": "A Super Admin role dedicated to managing multiple hospital entities simultaneously within a single backend ecosystem." } 
+                    }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": { "id": "ALUR KERJA", "en": "WORKFLOW & ACCESS" },
+                "title": { "id": "Otomatisasi Penanganan Pasien", "en": "Patient Handling Automation" },
+                "content": { 
+                    "id": "Sistem ini menggunakan alur validasi yang ketat: Alur dimulai ketika Admin RS mencari dan memilih pasien berdasarkan NIK untuk di-*assign*. Setelah status aktif, pasien baru dapat menggunakan aplikasi mobile untuk mengatur jadwal obat dan mencari rute RS. Secara *background*, setiap data lokasi dan aktivitas minum obat pasien akan otomatis ditembakkan ke backend ASP.NET Core untuk dianalisis oleh dokter yang bertugas.", 
+                    "en": "The system employs a strict validation workflow: It begins when a Hospital Admin searches and selects a patient based on their NIK to assign them. Once active, the patient can use the mobile app to set medication schedules and find hospital routes. In the background, all patient location data and medication activities are automatically sent to the ASP.NET Core backend to be analyzed by the attending doctors." 
+                }
+            }
+        ]
+    },
+    {
+        "id": "restaurant-makku",
+        "title": "Restaurant Makku",
+        "description": {
+            "id": "Sistem pemesanan makanan dan reservasi meja restoran berbasis web interaktif untuk mendigitalisasi operasional F&B dan meningkatkan pengalaman pelanggan.",
+            "en": "An interactive web-based food ordering and table reservation system to digitize F&B operations and enhance customer experience."
+        },
+        "techStack": ["Laravel", "PHP", "PostgreSQL", "Bootstrap"],
+        "image": "/images/makku/makku-image-1.png",
+        "gallery": [
+            "/images/makku/makku-image-1.png"
+        ],
+        "repoLink": "https://github.com/fathss/restoran-makku",
+        "demoLink": "",
+        "videoLinks": [],
+        "caseStudy": [
+            {
+                "type": "hero-section",
+                "badge": { "id": "PLATFORM F&B FULL-STACK", "en": "FULL-STACK F&B PLATFORM" },
+                "title": { "id": "Restaurant Makku: Kemudahan dalam Satu Gigitan", "en": "Restaurant Makku: Convenience in Every Bite" },
+                "subtitle": { 
+                    "id": "Aplikasi manajemen pesanan restoran yang menyatukan kemudahan pelanggan dalam memesan makanan dengan kekuatan kontrol admin untuk mengelola katalog menu secara dinamis.", 
+                    "en": "A restaurant order management app that unites the convenience of customer food ordering with the power of admin control to manage menu catalogs dynamically." 
+                },
+                "stats": [
+                    { "value": "Dine-in", "label": { "id": "& Bawa Pulang", "en": "& Takeaway" } },
+                    { "value": "Booking", "label": { "id": "Reservasi Meja", "en": "Table Reservation" } }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": { "id": "LATAR BELAKANG", "en": "BACKGROUND" },
+                "title": { "id": "Digitalisasi Operasional Restoran", "en": "Digitizing Restaurant Operations" },
+                "content": { 
+                    "id": "Banyak restoran masih mengandalkan antrean fisik, pemesanan manual oleh pramusaji, dan buku reservasi konvensional. Pendekatan ini sering kali memicu kesalahan pencatatan pesanan dan waktu tunggu pelanggan yang lama. Restaurant Makku dibangun untuk mengatasi kendala tersebut dengan memberikan *platform* otonom bagi pelanggan untuk mengatur pesanan mereka sendiri, sekaligus memudahkan pihak restoran dalam mengontrol harga dan menu.", 
+                    "en": "Many restaurants still rely on physical queues, manual ordering by waiters, and conventional reservation books. This approach often leads to order recording errors and long customer wait times. Restaurant Makku was built to overcome these obstacles by providing an autonomous platform for customers to manage their own orders, while making it easier for the restaurant to control prices and menus." 
+                }
+            },
+            {
+                "type": "feature-grid",
+                "badge": { "id": "FITUR UTAMA", "en": "KEY FEATURES" },
+                "title": { "id": "Sistem Pemesanan & Inventaris", "en": "Ordering & Inventory System" },
+                "items": [
+                    { 
+                        "icon": "LayoutDashboard", 
+                        "title": { "id": "Manajemen Menu Dinamis", "en": "Dynamic Menu Management" }, 
+                        "desc": { "id": "Panel admin eksklusif untuk menambahkan, mengubah, atau menghapus item menu beserta harganya secara real-time.", "en": "Exclusive admin panel to add, edit, or remove menu items and their prices in real-time." } 
+                    },
+                    { 
+                        "icon": "Ticket", 
+                        "title": { "id": "Sistem Keranjang & Checkout", "en": "Cart & Checkout System" }, 
+                        "desc": { "id": "Pelanggan terautentikasi dapat memilih menu, memasukkannya ke dalam keranjang (Cart), dan memproses pembayaran.", "en": "Authenticated customers can select menus, add them to the Cart, and process payments." } 
+                    },
+                    { 
+                        "icon": "Calendar", 
+                        "title": { "id": "Reservasi & Tipe Pesanan", "en": "Reservations & Order Types" }, 
+                        "desc": { "id": "Mendukung fleksibilitas alur pesanan untuk makan di tempat (Dine-in), bawa pulang (Takeaway), hingga reservasi meja.", "en": "Supports flexible order workflows for Dine-in, Takeaway, and scheduled table reservations." } 
+                    }
+                ]
+            },
+            {
+                "type": "text-heading",
+                "badge": { "id": "ALUR KERJA", "en": "WORKFLOW & ACCESS" },
+                "title": { "id": "Alur Transaksi End-to-End", "en": "End-to-End Transaction Flow" },
+                "content": { 
+                    "id": "Sistem beroperasi dengan alur transaksi dua arah: Pihak restoran (Admin) pertama-tama mendata dan mengatur ketersediaan menu di dashboard. Di sisi front-end, pelanggan wajib melakukan proses Login/Autentikasi. Setelah masuk, pelanggan menjelajahi menu, menambahkan makanan ke keranjang, dan mengonfirmasi metode pemesanan (Takeaway/Dine-in) atau mengisi detail reservasi meja sebelum menyelesaikan pembayaran.", 
+                    "en": "The system operates with a two-way transaction flow: The restaurant (Admin) first records and sets menu availability in the dashboard. On the front-end side, customers must go through a Login/Authentication process. Once logged in, customers browse the menu, add food to the cart, and confirm the order method (Takeaway/Dine-in) or fill in table reservation details before completing the payment." 
                 }
             }
         ]

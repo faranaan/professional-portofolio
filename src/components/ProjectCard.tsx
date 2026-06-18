@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { 
     SiReact, SiGithub, SiHtml5, SiCss, SiTypescript, 
-    SiTailwindcss, SiLaravel, SiPhp, SiFlutter, SiPostgresql, SiDocker 
+    SiTailwindcss, SiLaravel, SiPhp, SiFlutter, SiPostgresql, SiDocker, SiFigma, SiBootstrap
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import type { JSX } from "react";
@@ -19,7 +19,9 @@ const techIcons: { [key: string]: JSX.Element } = {
     "Flutter": <SiFlutter className="text-[#02569B]" />,
     "PostgreSQL": <SiPostgresql className="text-[#4169E1]" />,
     "ASP.NET Core": <span className="text-[#512BD4] font-bold">.NET</span>,
-    "Docker": <SiDocker className="text-[#2496ED]" />
+    "Docker": <SiDocker className="text-[#2496ED]" />,
+    "Figma": <SiFigma className="text-[#F24E1E]" />,
+    "Bootstrap": <SiBootstrap className="text-[#7952B3]" />
 };
 
 interface ProjectProps {

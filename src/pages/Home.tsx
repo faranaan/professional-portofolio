@@ -1,19 +1,36 @@
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Projects from "./Projects";
+import Resume from "../components/Resume"; // Pastikan path ini sesuai
 import { motion } from "framer-motion";
 
 export default function Home() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const currentLang = i18n.language as 'id' | 'en';
+    
+    // 👇 GANTI DENGAN EMAIL ASLIMU DI SINI 👇
+    const myEmail = "emailkamu@gmail.com"; 
 
-    const handleContact = () => {
-        const phoneNumber = "6288803482016"; // GANTI NOMORMU
-        const message = encodeURIComponent("Halo Far'an, saya melihat portofolio Anda dan tertarik untuk berdiskusi lebih lanjut.");
-        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-    };
+    // Konfigurasi Email untuk "Let's Get in Touch"
+    const contactSubject = currentLang === 'id' 
+        ? "Tawaran Kerja Sama: Portofolio Muhammad Far'an" 
+        : "Portfolio Inquiry: Let's Collaborate";
+    const contactBody = currentLang === 'id'
+        ? "Halo Far'an,\n\nSaya melihat portofolio Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kerja sama.\n\nTerima kasih,\n[Nama Anda / Perusahaan]"
+        : "Hi Far'an,\n\nI saw your portfolio and am interested in discussing potential collaboration opportunities further.\n\nThank you,\n[Your Name / Company]";
+    const mailtoContact = `mailto:${myEmail}?subject=${encodeURIComponent(contactSubject)}&body=${encodeURIComponent(contactBody)}`;
+
+    // Konfigurasi Email untuk "Request CV"
+    const cvSubject = currentLang === 'id'
+        ? "Permintaan CV Lengkap - Muhammad Far'an"
+        : "Request for Full Resume - Muhammad Far'an";
+    const cvBody = currentLang === 'id'
+        ? "Halo Far'an,\n\nSaya sangat tertarik dengan proyek-proyek di portofolio Anda. Boleh minta salinan Curriculum Vitae (CV) lengkap Anda untuk keperluan evaluasi profesional?\n\nTerima kasih,\n[Nama Anda / Perusahaan]"
+        : "Hi Far'an,\n\nI am very interested in the projects on your portfolio. Could I request a copy of your full Curriculum Vitae (CV) for professional evaluation purposes?\n\nThank you,\n[Your Name / Company]";
+    const mailtoCV = `mailto:${myEmail}?subject=${encodeURIComponent(cvSubject)}&body=${encodeURIComponent(cvBody)}`;
 
     return (
-        <div className="flex flex-col gap-24 py-16 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto min-h-screen">
+        <div className="flex flex-col gap-16 py-16 px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto min-h-screen">
             
             {/* --- HERO SECTION --- */}
             <motion.section 
@@ -36,11 +53,16 @@ export default function Home() {
                     </div>
                     
                     <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-                        <a href="#projects" className="flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-xl font-medium shadow-md">
+                        <a href="#projects" className="flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-7 py-3.5 rounded-xl font-medium shadow-md transition-transform hover:scale-105">
                             {t('hero.cta_projects')} <ArrowRight size={20} />
                         </a>
-                        <a href="/cv.pdf" target="_blank" className="flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 px-7 py-3.5 rounded-xl font-medium">
-                            {t('hero.cta_cv')} <Download size={20} />
+                        
+                        {/* --- TOMBOL REQUEST CV --- */}
+                        <a 
+                            href={mailtoCV}
+                            className="flex items-center gap-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 px-7 py-3.5 rounded-xl font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all cursor-pointer"
+                        >
+                            {t('hero.cta_cv', currentLang === 'id' ? 'Minta CV' : 'Request CV')} <Mail size={20} />
                         </a>
                     </div>
                 </div>
@@ -72,6 +94,10 @@ export default function Home() {
                 </div>
             </motion.section>
             
+            {/* --- RESUME SECTION --- */}
+            <Resume />
+
+            {/* --- PROJECTS SECTION --- */}
             <Projects />
 
             {/* --- CONTACT SECTION --- */}
@@ -91,12 +117,13 @@ export default function Home() {
                         {t('contact.subtitle')}
                     </p>
                     <div className="pt-8">
-                        <button 
-                            onClick={handleContact}
-                            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-full font-medium transition-all"
+                        {/* --- TOMBOL CONTACT VIA EMAIL --- */}
+                        <a 
+                            href={mailtoContact}
+                            className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-full font-medium transition-all hover:scale-105 hover:shadow-lg cursor-pointer"
                         >
-                            {t('contact.cta')} <ArrowRight size={20} />
-                        </button>
+                            {t('contact.cta')} <Mail size={20} />
+                        </a>
                     </div>
                 </div>
             </motion.section>

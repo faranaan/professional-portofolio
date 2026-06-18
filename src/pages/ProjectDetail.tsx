@@ -10,7 +10,7 @@ import {
 import { 
     SiFlutter, SiGithub, SiReact, SiHtml5, SiCss, SiTypescript, 
     SiTailwindcss, SiLaravel, SiPhp, SiPostgresql, SiYoutube, SiGoogleplay,
-    SiDocker
+    SiDocker, SiFigma, SiBootstrap
 } from "react-icons/si";
 import type { JSX } from "react";
 import projectsData from '../data/projects.json';
@@ -27,7 +27,9 @@ const techIcons: { [key: string]: JSX.Element } = {
     "Flutter": <SiFlutter className="text-[#02569B]" />,
     "PostgreSQL": <SiPostgresql className="text-[#4169E1]" />,
     "ASP.NET Core": <span className="text-[#512BD4] font-bold">.NET</span>,
-    "Docker": <SiDocker className="text-[#2496ED]" />
+    "Docker": <SiDocker className="text-[#2496ED]" />,
+    "Figma": <SiFigma className="text-[#F24E1E]" />,
+    "Bootstrap": <SiBootstrap className="text-[#7952B3]" />
 };
 
 const iconMap: { [key: string]: JSX.Element } = {
@@ -99,7 +101,7 @@ export default function ProjectDetail() {
                         className="text-center py-16 md:py-24 space-y-6"
                     >
                         <span className="px-4 py-1.5 rounded-full bg-accent/10 text-accent dark:bg-accent/20 dark:text-blue-400 text-sm font-bold tracking-widest uppercase inline-block">
-                            {block.badge}
+                            {block.badge[currentLang] || block.badge.en}
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white tracking-tight">
                             {block.title[currentLang] || block.title.en}
@@ -132,7 +134,7 @@ export default function ProjectDetail() {
                         className="py-12 max-w-3xl mx-auto text-center space-y-4"
                     >
                         <span className="px-4 py-1.5 rounded-full bg-red-100 text-red-600 dark:bg-red-500/10 dark:text-red-400 text-xs font-bold tracking-widest uppercase inline-block">
-                            {block.badge}
+                            {block.badge[currentLang] || block.badge.en}
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                             {block.title[currentLang] || block.title.en}
@@ -154,7 +156,7 @@ export default function ProjectDetail() {
                     >
                         <div className="text-center mb-12 space-y-4">
                             <span className="px-4 py-1.5 rounded-full bg-blue-100 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400 text-xs font-bold tracking-widest uppercase inline-block">
-                                {block.badge}
+                                {block.badge[currentLang] || block.badge.en}
                             </span>
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                                 {block.title[currentLang] || block.title.en}
@@ -221,7 +223,7 @@ export default function ProjectDetail() {
                         ))}
                     </div>
 
-                    {/* ACTION BUTTONS (Demo, Repo Dropdown, YouTube Dropdown) */}
+                    {/* ACTION BUTTONS */}
                     <div className="flex flex-wrap items-center gap-4 mb-8">
                         {/* 1. Live Demo / Play Store */}
                         {project.demoLink && (
@@ -243,14 +245,14 @@ export default function ProjectDetail() {
                             </a>
                         )}
 
-                        {/* 2. Repository (Multiple/Dropdown OR Single) */}
+                        {/* 2. Repository */}
                         {(project as any).repoLinks && (project as any).repoLinks.length > 0 ? (
                             <div className="relative z-40">
                                 <button 
                                     onClick={() => setShowRepoMenu(!showRepoMenu)}
-                                    className="flex items-center gap-2 bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 px-6 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all font-medium shadow-sm"
+                                    className="flex items-center gap-2 bg-surface-light dark:bg-surface-dark text-gray-900 dark:text-white border border-gray-200 dark:border-gray-800 px-6 py-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all font-medium shadow-sm group"
                                 >
-                                    <SiGithub size={18} /> 
+                                    <SiGithub size={18} className="group-hover:text-gray-900 dark:group-hover:text-white transition-colors" /> 
                                     {t('project_detail.repo', 'Repositories')} 
                                     <ChevronDown size={18} className={`transition-transform duration-300 ${showRepoMenu ? 'rotate-180' : ''}`} />
                                 </button>
@@ -273,7 +275,7 @@ export default function ProjectDetail() {
                                                     className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors border-b border-gray-50 dark:border-gray-800/50 last:border-0"
                                                 >
                                                     <SiGithub size={16} />
-                                                    <span className="text-sm font-medium">{repo.label}</span>
+                                                    <span className="text-sm font-medium">{repo.label[currentLang] || repo.label.en}</span>
                                                 </a>
                                             ))}
                                         </motion.div>
@@ -291,9 +293,9 @@ export default function ProjectDetail() {
                             <div className="relative z-50">
                                 <button 
                                     onClick={() => setShowVideoMenu(!showVideoMenu)}
-                                    className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/30 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-all font-medium shadow-sm"
+                                    className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/30 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white dark:hover:bg-red-600 dark:hover:text-white transition-all font-medium shadow-sm group"
                                 >
-                                    <SiYoutube size={18} /> 
+                                    <SiYoutube size={18} className="text-red-500 group-hover:text-white transition-colors" /> 
                                     {t('project_detail.watch_demos', 'Watch Demos')} 
                                     <ChevronDown size={18} className={`transition-transform duration-300 ${showVideoMenu ? 'rotate-180' : ''}`} />
                                 </button>
@@ -316,7 +318,7 @@ export default function ProjectDetail() {
                                                     className="flex items-center gap-3 px-4 py-3 hover:bg-red-50 dark:hover:bg-red-900/10 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors border-b border-gray-50 dark:border-gray-800/50 last:border-0"
                                                 >
                                                     <SiYoutube size={16} className="text-red-500" />
-                                                    <span className="text-sm font-medium">{video.label}</span>
+                                                    <span className="text-sm font-medium">{video.label[currentLang] || video.label.en}</span>
                                                 </a>
                                             ))}
                                         </motion.div>

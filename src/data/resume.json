@@ -1,0 +1,67 @@
+{
+    "experience": [
+        {
+            "role": { "id": "Steering Committee & Koordinator Lapangan", "en": "Steering Committee & Field Coordinator" },
+            "event": { "id": "Program Orientasi Jurusan (HIMIT)", "en": "Department Orientation Program (HIMIT)" },
+            "date": { "id": "MEI 2026", "en": "MAY 2026" },
+            "points": [
+                { "id": "Bertindak sebagai konseptor utama kurikulum orientasi, memastikan semua program selaras dengan nilai akademik dan organisasi.", "en": "Served as the lead conceptualizer for the orientation curriculum, ensuring all programs aligned with academic and organizational values." },
+                { "id": "Memimpin operasi lapangan sebagai Koordinator Lapangan, mengelola eksekusi program dan memastikan keamanan serta kedisiplinan seluruh peserta.", "en": "Directed field operations as Field Coordinator, managing program execution and ensuring safety/discipline for all participants." }
+            ]
+        },
+        {
+            "role": { "id": "Ketua Pelaksana", "en": "Chairman" },
+            "event": { "id": "HIMIT Sports Community Week", "en": "HIMIT Sports Community Week" },
+            "date": { "id": "NOV 2025", "en": "NOV 2025" },
+            "points": [
+                { "id": "Memimpin tim panitia berjumlah 40+ orang untuk menyelenggarakan acara olahraga dengan 258+ peserta.", "en": "Led a team of 40+ committee members to organize a sports event with 258+ participants." },
+                { "id": "Mengelola operasional acara end-to-end, termasuk perencanaan strategis, alokasi anggaran, dan koordinasi antar departemen.", "en": "Managed end-to-end event operations, including strategic planning, budget allocation, and cross-departmental coordination." }
+            ]
+        },
+        {
+            "role": { "id": "Liaison Officer & Mentor", "en": "Liaison Officer & Mentor" },
+            "event": { "id": "LKMM Pra-TD", "en": "LKMM Pra-TD" },
+            "date": { "id": "NOV 2025", "en": "NOV 2025" },
+            "points": [
+                { "id": "Memberikan bimbingan dan arahan kepada mahasiswa baru, memfasilitasi transisi mereka ke dalam budaya organisasi kampus dan mengembangkan soft skills.", "en": "Provided mentorship and guidance to new students, facilitating their transition into the campus organizational culture and developing soft skills." }
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": { "id": "D4 Teknik Informatika", "en": "Applied Bachelor in Informatics Engineering" },
+            "institution": { "id": "Politeknik Elektronika Negeri Surabaya (PENS)", "en": "Electronic Engineering Polytechnic Institute of Surabaya (EEPIS)" },
+            "date": { "id": "2024 - Sekarang", "en": "2024 - Present" },
+            "points": [
+                { "id": "Fokus pada Rekayasa Perangkat Lunak, Struktur Data, dan Arsitektur Cloud.", "en": "Focus on Software Engineering, Data Structures, and Cloud Architecture." },
+                { "id": "Aktif berpartisipasi dalam Himpunan Mahasiswa (HIMIT).", "en": "Actively participating in the Student Association (HIMIT)." }
+            ]
+        }
+    ],
+    "trainings": [
+        {
+            "title": "AWS Academy Graduate - Cloud Foundations",
+            "issuer": "AWS Academy",
+            "date": { "id": "MAR 2026 - MEI 2026", "en": "MAR 2026 - MAY 2026" },
+            "points": [
+                { "id": "Mendapatkan lencana Cloud Foundations, menunjukkan pengetahuan fundamental dalam komputasi awan, layanan inti AWS, keamanan, dan arsitektur.", "en": "Awarded the Cloud Foundations Training Badge, demonstrating foundational knowledge in cloud computing concepts, AWS core services, security, and architecture." }
+            ]
+        },
+        {
+            "title": "Flutter & Dart - The Complete Guide",
+            "issuer": "Udemy",
+            "date": { "id": "JAN 2026 - FEB 2026", "en": "JAN 2026 - FEB 2026" },
+            "points": [
+                { "id": "Program pengembangan mobile lanjutan berfokus pada pembuatan aplikasi lintas platform berperforma tinggi.", "en": "An advanced mobile development program focusing on building high-performance, cross-platform applications." }
+            ]
+        }
+    ],
+    "skills": {
+        "Programming Languages": "JavaScript (ES6+), TypeScript, Dart, C#, PHP, SQL.",
+        "Front-End Development": "React, Tailwind CSS, HTML5, CSS3, Responsive Design.",
+        "Back-End Development": "ASP.NET Core, RESTful APIs, Laravel.",
+        "Mobile Development": "Flutter.",
+        "Databases & Cloud": "PostgreSQL, MySQL, AWS Cloud Foundations.",
+        "Tools & Dev Practices": "Git, Figma (UI/UX), Agile (Scrum), Docker, VS Code."
+    }
+}
